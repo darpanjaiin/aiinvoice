@@ -1,0 +1,122 @@
+We have to use HTMl, CSS and JavaScript to build the website.
+Product Requirements Document (PRD)
+Product Name: AI Invoice Creator
+
+1. Executive Summary
+The AI Invoice Creator is a mobile web app designed for small local Indian businesses to generate invoices instantly using voice or text inputs. By leveraging pre-fed master business data, the app creates professional, customizable invoices in seconds, simplifying invoicing for shopkeepers with minimal technical expertise.
+
+2. Objectives
+Provide an intuitive and simple invoice creation tool for small businesses.
+Automate the process of invoice generation using voice/text inputs.
+Save time and reduce manual errors in invoicing.
+Increase efficiency and professionalism for small-scale Indian businesses.
+3. Target Audience
+Small shopkeepers (e.g., kirana stores, electronics shops, clothing stores).
+Local service providers (e.g., plumbers, electricians, tutors).
+Small-scale manufacturers and suppliers.
+4. Features & Functional Requirements
+4.1 Setup Phase (One-Time Task)
+
+Input Fields:
+Business Name
+Logo Upload
+Business Address
+Tagline/Description
+Tax Details (GSTIN if applicable)
+Contact Details (Phone, Email)
+Default Notes/Customer Message
+Customization Options:
+Invoice Template Selection (minimal, modern, classic styles).
+Custom Terms & Conditions.
+4.2 Invoice Creation
+
+Input Options:
+Voice Input: “Sold 3 units of product ‘A’ to Mr. Darpan for Rs. 100 each.”
+Text Input: Manually type product, quantity, and customer details.
+AI Processing:
+Extract and populate key fields like product, quantity, price, customer name, etc.
+Invoice Fields:
+Invoice Number (auto-generated).
+Date and Due Date.
+Bill To (customer name and optional address).
+Itemized Details (product name, quantity, rate, amount).
+Tax (GST calculation based on pre-fed rates).
+Total Amount (in figures and words).
+4.3 Sharing & Storage
+
+Invoice Formats:
+Generate PDF format for download or sharing.
+Sharing Options:
+Share via WhatsApp, Email, or Print.
+History & Records:
+Store past invoices for quick access and reporting.
+4.4 Language & Accessibility
+
+Multilingual support (regional Indian languages).
+Simple, minimalistic UI optimized for low-tech users.
+4.5 Payment Integration
+
+Display QR codes (UPI) or bank account details on invoices for instant payments.
+4.6 Reporting & Analytics (Optional Add-on)
+
+Sales Summary (Daily, Weekly, Monthly).
+Customer Details & Purchase History.
+Top Products Sold.
+5. Non-Functional Requirements
+Platform: Mobile web app (PWA-enabled for offline use).
+Performance: Generate invoices within 5 seconds of input.
+Security: Encrypt user data and ensure compliance with Indian data protection laws.
+Scalability: Handle multiple businesses and high transaction volumes.
+6. User Flow
+Onboarding:
+Shopkeeper signs up and sets up master data (business details, logo, T&Cs).
+Invoice Creation:
+Inputs order details via voice or text.
+AI processes and generates the invoice automatically.
+Review & Share:
+Shopkeeper reviews the generated invoice.
+Shares it with customers via preferred channels.
+Track & Analyze:
+Past invoices stored in the app for reporting.
+7. Monetization
+Freemium Model:
+Free plan: Limited invoices (e.g., 20/month) and basic templates.
+Premium plan: Unlimited invoices, advanced analytics, template customization.
+Subscription Tiers:
+Monthly and annual pricing options.
+One-Time Setup Fee:
+For advanced template customization or onboarding assistance.
+8. Competitive Analysis
+Competitors: Zoho Invoice, Vyapar App, MyBillBook.
+Differentiation:
+Voice-based input tailored for small Indian businesses.
+Regional language support.
+Simplified setup and operation for low-tech users.
+9. Risks & Mitigation
+User Adoption:
+Provide free trials and demos for easy onboarding.
+Voice Recognition Errors:
+Include manual correction options.
+Data Privacy Concerns:
+Clearly communicate security measures and policies.
+10. Roadmap
+Phase 1: MVP (3-6 Months)
+
+Basic invoicing functionality with voice/text inputs.
+Customizable templates and PDF generation.
+Offline support and sharing via WhatsApp.
+Phase 2: Advanced Features (6-12 Months)
+
+Multilingual support.
+QR Code and UPI payment integration.
+Sales analytics dashboard.
+Phase 3: Expansion (12-18 Months)
+
+Add inventory management.
+Integrate with accounting software (e.g., Tally).
+Enable recurring invoicing for subscriptions.
+11. Success Metrics
+User adoption rate: % of shopkeepers signing up and using regularly.
+Average time to create an invoice: Target <5 seconds.
+Customer retention rate: % of users subscribing after free trial.
+Revenue generated via subscriptions.
