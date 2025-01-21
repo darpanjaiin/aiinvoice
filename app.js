@@ -69,7 +69,7 @@ window.removeItem = function(index) {
 };
 
 // OpenAI API Key - Replace with your key after cloning
-const OPENAI_API_KEY = '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';  // Never commit actual API keys to GitHub
+const OPENAI_API_KEY = 'YOUR_OPENAI_API_KEY';  // Never commit actual API keys to GitHub
 
 // Initialize Speech Recognition
 if (window.webkitSpeechRecognition) {
@@ -170,23 +170,27 @@ async function processNaturalLanguageInput(input) {
                 'Authorization': `Bearer ${OPENAI_API_KEY}`
             },
             body: JSON.stringify({
-                model: "gpt-3.5-turbo",
+                model: "gpt-3.5-turbo-1106",
                 messages: [
                     {
                         role: "system",
-                        content: "Extract customer name and item details from text. Return a JSON object with customerName and items array. Each item should have name, quantity, and price properties. Example: For 'For John Doe: 2 shirts at $25 each', return {\"customerName\": \"John Doe\", \"items\": [{\"name\": \"shirt\", \"quantity\": 2, \"price\": 25}]}"
+                        content: "You are a helpful assistant that extracts customer name and item details from text. Return only valid JSON."
                     },
                     {
                         role: "user",
-                        content: "Format this order: " + input
+                        content: `Extract customer name and items from this text and return a JSON object with format: {"customerName": "name", "items": [{"name": "item", "quantity": number, "price": number}]}. Text: ${input}`
                     }
                 ],
-                response_format: { type: "json_object" }
+                response_format: { "type": "json_object" },
+                temperature: 0.7,
+                max_tokens: 500
             })
         });
 
         if (!response.ok) {
-            throw new Error('API request failed');
+            const errorData = await response.json();
+            console.error('API Error:', errorData);
+            throw new Error(errorData.error?.message || 'API request failed');
         }
 
         const data = await response.json();
