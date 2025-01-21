@@ -69,7 +69,7 @@ window.removeItem = function(index) {
 };
 
 // OpenAI API Key - Replace with your key after cloning
-const OPENAI_API_KEY = 'YOUR_OPENAI_API_KEY';  // Never commit actual API keys to GitHub
+const OPENAI_API_KEY = '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';  // Never commit actual API keys to GitHub
 
 // Initialize Speech Recognition
 if (window.webkitSpeechRecognition) {
